@@ -8,11 +8,10 @@ const ArticleDetail = () => {
   const [article, setArticle] = useState(null);
 
   useEffect(() => {
-    axios.get(`${process.env.REACT_APP_API_URL}/api/articles/${id}`)
+    axios.get(`http://localhost:5000/api/articles/${id}`)
       .then(res => setArticle(res.data))
       .catch(err => console.error(err));
   }, [id]);
-
   if (!article) {
     return <div className="loading">Loading...</div>;
   }

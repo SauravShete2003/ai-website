@@ -6,7 +6,7 @@ const ArticleList = () => {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    axios.get(`${process.env.REACT_APP_API_URL }/api/articles`)
+    axios.get(`http://localhost:5000/api/articles`)
       .then(res => setArticles(res.data))
       .catch(err => console.error(err));
   }, []);

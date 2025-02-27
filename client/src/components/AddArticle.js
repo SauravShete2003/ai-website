@@ -12,7 +12,7 @@ const AddArticle = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post(`${process.env.REACT_APP_API_URL}/api/articles`, formData)
+    axios.post(`http://localhost:5000/api/articles`, formData)
       .then(() => {
         alert('Article added successfully!');
         navigate('/');
