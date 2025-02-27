@@ -40,12 +40,14 @@ const AddArticle = () => {
         </div>
         
         <div className="form-group">
-          <label>Content:</label>
+          <label>Content (HTML format):</label>
           <textarea
             name="content"
             value={formData.content}
             onChange={handleChange}
             required
+            rows={10}
+            placeholder="Example: <p>This is a paragraph.</p><ul><li>List item 1</li><li>List item 2</li></ul>"
           />
         </div>
 
