@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-
+import api from './api';
 const AddArticle = () => {
   const [formData, setFormData] = useState({
     title: '',
@@ -12,7 +11,7 @@ const AddArticle = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post(`http://localhost:5000/api/articles`, formData)
+    api.post("/api/articles", formData)
       .then(() => {
         alert('Article added successfully!');
         navigate('/');

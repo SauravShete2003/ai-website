@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import { useParams, Link } from 'react-router-dom';
 import DOMPurify from 'dompurify';
+import api from './api';
 
 const ArticleDetail = () => {
   const { id } = useParams();
   const [article, setArticle] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/articles/${id}`)
+    api.get(`/api/articles/${id}`)
       .then(res => setArticle(res.data))
       .catch(err => console.error(err));
   }, [id]);
