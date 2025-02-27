@@ -1,0 +1,47 @@
+/* Article Detail Page Styles */
+.article-detail {
+  padding: 2rem 0;
+}
+
+.article-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.article-header h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin: 1rem 0;
+}
+
+.article-header .date {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.article-content {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  line-height: 1.8;
+  color: var(--text-color);
+}
+
+.article-content p {
+  margin-bottom: 1.5rem;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-top: 2rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.back-btn:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
