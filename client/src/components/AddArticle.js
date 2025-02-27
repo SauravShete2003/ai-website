@@ -1,4 +1,3 @@
-// client/src/components/AddArticle.js (updated)
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -13,7 +12,7 @@ const AddArticle = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:5000/api/articles', formData)
+    axios.post(`${process.env.REACT_APP_API_URL}/api/articles`, formData)
       .then(() => {
         alert('Article added successfully!');
         navigate('/');

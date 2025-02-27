@@ -1,14 +1,13 @@
-// client/src/components/ArticleDetail.js
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams, Link } from 'react-router-dom';
 
 const ArticleDetail = () => {
-  const { id } = useParams(); // Get the article ID from the URL
+  const { id } = useParams();
   const [article, setArticle] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/articles/${id}`)
+    axios.get(`${process.env.REACT_APP_API_URL}/api/articles/${id}`)
       .then(res => setArticle(res.data))
       .catch(err => console.error(err));
   }, [id]);
