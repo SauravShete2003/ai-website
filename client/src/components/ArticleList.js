@@ -26,7 +26,7 @@ const ArticleList = () => {
               </span>
             </div>
             <h3>{article.title}</h3>
-            <p>{article.content.substring(0, 150)}...</p>
+            <p style={{fontWeight: "600"}}>{article.content.substring(0, 130)}...</p>
             <Link to={`/article/${article._id}`} className="read-more">
               Read More →
             </Link>

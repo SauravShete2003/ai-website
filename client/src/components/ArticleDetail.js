@@ -13,11 +13,11 @@ const ArticleDetail = () => {
   }, [id]);
 
   if (!article) {
-    return <div>Loading...</div>;
+    return <div className="loading">Loading...</div>;
   }
 
   return (
-    <div className="article-detail container">
+    <div className="article-detail">
       <div className="article-header">
         <span className={`category-tag ${article.category.toLowerCase()}`}>
           {article.category}
@@ -29,6 +29,20 @@ const ArticleDetail = () => {
       </div>
       <div className="article-content">
         <p>{article.content}</p>
+        <p>
+          <strong>Key Takeaways:</strong>
+          <ul>
+            <li>AI is transforming industries with tools like ChatGPT and MidJourney.</li>
+            <li>GPT-4 offers improved reasoning and multimodal capabilities.</li>
+            <li>AI-powered drug discovery is accelerating medical breakthroughs.</li>
+          </ul>
+        </p>
+        <blockquote>
+          "The future of AI is not just about technology; it's about how we use it to solve real-world problems."
+        </blockquote>
+        <p>
+          For more information, visit <a href="https://openai.com">OpenAI's website</a>.
+        </p>
       </div>
       <Link to="/" className="back-btn">
         ← Back to Home
